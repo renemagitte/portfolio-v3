@@ -1,0 +1,110 @@
+
+body{
+  font-family: 'Oxygen', sans-serif;
+  font-size: 14px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  margin-top: 250px;
+}
+
+
+
+
+.topTitle{
+  font-family: 'Oxygen', sans-serif;
+  font-size: 40px;
+  display: block;
+}
+
+h1{
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+.computer{
+  width: 200px;
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 80px);
+  z-index: 20;
+  /* display: block; */
+  -webkit-animation: glow 15s infinite linear;
+          animation: glow 15s infinite linear;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+
+
+
+@-webkit-keyframes glow {
+  000% { -webkit-filter: drop-shadow(5px 5px 13px #f99); filter: drop-shadow(5px 5px 13px #f99) }
+  033% { -webkit-filter: drop-shadow(5px 5px 13px #9f9); filter: drop-shadow(5px 5px 13px #9f9) }
+  066% { -webkit-filter: drop-shadow(5px 5px 13px #99f); filter: drop-shadow(5px 5px 13px #99f) }
+  100% { -webkit-filter: drop-shadow(5px 5px 13px #f99); filter: drop-shadow(5px 5px 13px #f99) }
+}
+@keyframes glow {
+  000% { -webkit-filter: drop-shadow(5px 5px 13px #f99); filter: drop-shadow(5px 5px 13px #f99) }
+  033% { -webkit-filter: drop-shadow(5px 5px 13px #9f9); filter: drop-shadow(5px 5px 13px #9f9) }
+  066% { -webkit-filter: drop-shadow(5px 5px 13px #99f); filter: drop-shadow(5px 5px 13px #99f) }
+  100% { -webkit-filter: drop-shadow(5px 5px 13px #f99); filter: drop-shadow(5px 5px 13px #f99) }
+}
+
+
+.skillsContainer{
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: calc(50% - 150px);
+  margin-top: 30px;
+}
+
+.skill{
+  width: auto;
+  height: 16px;
+  /* background-color: lightgreen; */
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid black;
+}
+
+
+.personal{
+  width: 100%;
+  height: 0px;
+  z-index: 99;
+  background-color: lightblue;
+  transition: all 1s ease-in-out;
+  transform-origin: left bottom 0;
+  position: absolute;
+  top: 0px;
+}
+
+.personalContent{
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.personal-open{
+  height: 100vh;
+}
+
+.hide{
+  display: none;
+}
+
+.visible{
+  /* display: block; */
+  opacity: 1;
+}
+
