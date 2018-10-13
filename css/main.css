@@ -189,6 +189,7 @@ h1{
   background-color: black;
   transition: height 1s ease-in-out;
   font-family: monospace;
+  font-size: 10px;
   color: green;
 }
 
