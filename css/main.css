@@ -1,9 +1,25 @@
 
+/****************************************************************/
+/*********************** BASICS *********************************/
+/****************************************************************/
+
 body{
   font-family: 'Oxygen', sans-serif;
   font-size: 14px;
   margin: 0px auto;
   text-align: center;
+  font-family: 'Oxygen', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: lightgreen;
+}
+
+h1{
+  margin: 0px;
+  padding: 10px;
+  font-size: 40px;
 }
 
 .container{
@@ -15,37 +31,33 @@ body{
   left: 0px;
 }
 
-
-
-
-.topTitle{
-  font-family: 'Oxygen', sans-serif;
-  font-size: 40px;
-  display: block;
-  z-index: 99;
+.core{
+  width: auto;
+  height: auto;
+  width: 500px;
+  margin-left: calc(50% - 250px);
+  /* background-color: white; */
+  position: absolute;
+  /* z-index: 90; */
 }
 
-h1{
-  margin: 0px;
-  padding: 0px;
-  
+.core-open{
+  font-family: monospace;
+  color: green;
 }
+
 
 .computer{
   width: 200px;
   position: absolute;
   top: 100px;
   left: calc(50% - 80px);
-  z-index: 20;
-  /* display: block; */
+  z-index: 95;
   -webkit-animation: glow 15s infinite linear;
-          animation: glow 15s infinite linear;
+  animation: glow 15s infinite linear;
   -webkit-transition: -webkit-transform 1s ease-out;
   transition: all 1s ease-out;
 }
-
-
-
 
 @-webkit-keyframes glow {
   000% { -webkit-filter: drop-shadow(5px 5px 13px #f99); filter: drop-shadow(5px 5px 13px #f99) }
@@ -61,14 +73,20 @@ h1{
 }
 
 
+/****************************************************************/
+/*********************** SKILLS *********************************/
+/****************************************************************/
+
 .skillsContainer{
+  position: absolute;
+  top: 100px;
   width: 300px;
   height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: calc(50% - 150px);
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .skill{
@@ -77,19 +95,10 @@ h1{
   border-radius: 20px;
   padding: 10px;
   margin: 5px;
-  /* border: 1px solid black; */
-
-  /* width: 110px;
-  height: 30px; */
-  /* background-color:#0099cc; */
-  /* background-color: rgb(226, 250, 226); */
-  /* text-align: center; */
-  /* color: #FFF; */
   position: relative;
 }
 
-.skill:hover {
-    
+.skill:hover { 
 }
 
 .skill:after {
@@ -129,11 +138,14 @@ h1{
   background-color: pink;
 }
 
+/****************************************************************/
+/*********************** PERSONAL *******************************/
+/****************************************************************/
+
 .personal{
   width: 100%;
   height: 0px;
   z-index: 30;
-  /* transition: all 0.7s ease-in-out; */
   transform-origin: left bottom 0;
   position: absolute;
   top: 0px;
@@ -144,47 +156,51 @@ h1{
   outline: solid 250px black;
   outline-offset: -250px;
 }
-
 .personal-frame{
   outline: solid 250px lightblue;
   outline-offset: -250px;
 }
-
 .personalContent{
   width: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-
-
 .personal-open{
   height: 100vh;
 } 
-
 .hide{
   display: none;
 }
-
 .visible{
   opacity: 1;
 }
 
-/* .base {
-	position: relative;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	border: solid 1px black;
-  background-color: lightblue;
-	mix-blend-mode: hard-light;
+/****************************************************************/
+/*********************** ABOUT **********************************/
+/****************************************************************/
+
+.about{
+  width: 100%;
+  height: 0px;
+  z-index: 90;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+  transition: height 1s ease-in-out;
+  font-family: monospace;
+  color: green;
 }
 
-.hole {
-	width: 80px;
-	height: 50px;
-	margin: 10px;
-	border: solid 1px red;	
-	border-radius: 10px;
-	background-color: gray;
-} */
+.about-open{
+  height: 100vh;
+} 
+
+.about-content{
+  opacity: 0;
+}
+
+.about-content-open{
+  opacity: 1;
+}
+
