@@ -9,9 +9,18 @@ var _openPersonalButton;
 var _closePersonalButton;
 var _personal;
 
-var skills = [ 'HTML', 'CSS', 'SASS', 'JavaScript', 'React', 'Ruby On Rails', 'HAML', 'Wordpress' ]
+// var skills = [ 'HTML', 'CSS', 'SASS', 'JavaScript', 'React', 'Ruby On Rails', 'HAML', 'Wordpress' ]
 
-// var skills = [ {'HTML', 3}, {'CSS', 3}, {'SASS', 2}, {'JavaScript', 3}, {'React', 2}, {'Ruby On Rails', 1} {'HAML', 1}, {'Wordpress', 1} ]
+var skills = [ 
+          { 'skill': 'HTML', 'rate': 3 }, 
+          { 'skill': 'CSS', 'rate': 2 },
+          { 'skill': 'SASS', 'rate': 2 },
+          { 'skill': 'JavaScript', 'rate': 3 },
+          { 'skill': 'React', 'rate': 2 },
+          { 'skill': 'Ruby on rails', 'rate': 1 },
+          { 'skill': 'HAML', 'rate': 1 },
+          { 'skill': 'Wordpress', 'rate': 1 }
+        ];
 
 
 _theImg = document.getElementById('computer');
@@ -24,18 +33,22 @@ _personalContent = document.querySelector('.personalContent');
 _container = document.querySelector('.container');
 
 
+// skills.map((skill) => {
+//   let skillDiv = `<div class="skill">${skill}</div>`;
+//   _skillsContainer.insertAdjacentHTML('beforeend', skillDiv);
+// })
+
 skills.map((skill) => {
-  let skillDiv = `<div class="skill">${skill}</div>`;
+  let skillDiv = `<div class="skill ${decideColor(skill.rate)}">${skill.skill}</div>`;
   _skillsContainer.insertAdjacentHTML('beforeend', skillDiv);
 })
 
 
 _skills = document.querySelectorAll('.skill');
 
-console.log(_skills);
 
 _skills.forEach(skill => {
-  skill.addEventListener('mouseover', skillGlisten)
+  skill.addEventListener('mouseover', skillGlisten);
 })
 
 _theImg.addEventListener('mouseover', startMousemove)
@@ -53,6 +66,7 @@ function mousemove(e) {
 }  
 
 function addStopListener(){
+  _theImg.addEventListener('click', stopMousemove);
   window.addEventListener('click', stopMousemove);
 }
 
@@ -67,13 +81,28 @@ function skillGlisten(){
   console.log("hej");
 }
 
+function decideColor(rating){
+  if(rating === 1){
+    return 'skill-lightgreen';
+  }
+  if(rating === 2){
+    return 'skill-lightblue';
+  }
+  if(rating === 3){
+    return 'skill-pink';
+  }
+}
+
 _openPersonalButton.addEventListener('click', openPersonal);
 _closePersonalButton.addEventListener('click', closePersonal);
 
 function openPersonal(){
   _personal.classList.add('personal-open');
-  _container.classList.add('hide');
-  _personalContent.classList.add('visible');
+  // _container.classList.add('hide');
+  // _personalContent.classList.add('visible');
+  _theImg.classList.add('hide');
+
+  // _personal.classList.add('personal-frame');
 }
 
 function closePersonal(){
