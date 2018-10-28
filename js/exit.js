@@ -2,7 +2,7 @@
 (function(){
 
   const pressed = [];
-  const commando = 'Controlc'
+  const commando = 'exit'
 
   var _about = document.querySelector('.about');
   var _aboutContent = document.querySelector('.about-content');

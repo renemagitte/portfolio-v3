@@ -11,7 +11,9 @@
     { 'skill': 'React', 'rate': 2 },
     { 'skill': 'Ruby on rails', 'rate': 1 },
     { 'skill': 'HAML', 'rate': 1 },
-    { 'skill': 'Wordpress', 'rate': 1 }
+    { 'skill': 'PHP', 'rate': 2 },
+    { 'skill': 'Wordpress', 'rate': 1 },
+    { 'skill': 'GIT', 'rate': 2 }
   ];
 
   createSkillDivs();
@@ -24,9 +26,9 @@
   }
 
   function decideColor(rating){
-    if(rating === 1){ return 'skill-lightgreen' }
-    if(rating === 2){ return 'skill-lightblue' }
-    if(rating === 3){ return 'skill-pink' }
+    if(rating === 1){ return 'skill-light' }
+    if(rating === 2){ return 'skill-medium' }
+    if(rating === 3){ return 'skill-dark' }
   }
 
 })();

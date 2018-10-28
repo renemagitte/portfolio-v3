@@ -31,21 +31,24 @@ h1{
   left: 0px;
 }
 
+.openAboutButton{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
 .core{
   width: auto;
   height: auto;
   width: 500px;
   margin-left: calc(50% - 250px);
-  /* background-color: white; */
   position: absolute;
-  /* z-index: 90; */
 }
 
-.core-open{
+/* .core-open{
   font-family: monospace;
   color: green;
-}
-
+} */
 
 .computer{
   width: 200px;
@@ -126,54 +129,21 @@ h1{
   transition: all 0.3s ease-out;
 }
 
-.skill-lightgreen{
-  background-color: lightgreen;
+.skill-light{
+  /* background-color: lightgreen; */
+  background-color: #bcffb5;
 }
 
-.skill-lightblue{
-  background-color: lightblue;
+.skill-medium{
+  /* background-color: lightblue; */
+  background-color: #7abf6d
 }
 
-.skill-pink{
-  background-color: pink;
+.skill-dark{
+  /* background-color: pink; */
+  background-color: #349137;
 }
 
-/****************************************************************/
-/*********************** PERSONAL *******************************/
-/****************************************************************/
-
-.personal{
-  width: 100%;
-  height: 0px;
-  z-index: 30;
-  transform-origin: left bottom 0;
-  position: absolute;
-  top: 0px;
-  background-color: transparent;
-  outline: none;
-  outline-offset: none;
-  transition: all 0.25s ease-in-out;
-  outline: solid 250px black;
-  outline-offset: -250px;
-}
-.personal-frame{
-  outline: solid 250px lightblue;
-  outline-offset: -250px;
-}
-.personalContent{
-  width: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.personal-open{
-  height: 100vh;
-} 
-.hide{
-  display: none;
-}
-.visible{
-  opacity: 1;
-}
 
 /****************************************************************/
 /*********************** ABOUT **********************************/
@@ -186,22 +156,56 @@ h1{
   position: absolute;
   top: 0px;
   left: 0px;
-  background-color: black;
-  transition: height 1s ease-in-out;
+  /* background-color: black; */
+  /* transition: height 1s ease-in-out; */
   font-family: monospace;
-  font-size: 10px;
-  color: green;
+  transition: background-color 1s ease-in-out;
 }
 
 .about-open{
   height: 100vh;
+  background-color: black;
 } 
 
 .about-content{
+  display: none;
   opacity: 0;
+  padding-left: 10px;
+  text-align: left;
+  font-family: 'Monaco', monospace;
+  color: lightgrey;
+  font-size: 12px;
 }
 
 .about-content-open{
+  display: block;
   opacity: 1;
 }
+
+
+.typer{
+  display: inline-block;
+  width: 8px;
+  height: 13px;
+  margin: 1px 0 0px -1px;
+  background-color: lightgrey;
+  opacity: 1;
+  vertical-align: top;
+  animation: blinker 0.5s linear infinite alternate;
+}
+
+/* &.blink{
+  animation: blinker 0.5s linear infinite alternate;
+} */
+
+@keyframes blinker{
+  0%
+    {opacity: 1;}
+  45%
+    {opacity: 1;}
+  55% 
+    {opacity: 0;}
+  100%
+    {opacity: 0;}  
+} 
 
