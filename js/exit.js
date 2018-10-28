@@ -3,6 +3,7 @@
 
   const pressed = [];
   const commando = 'exit';
+  const pressedAll = [];
 
 
   var _about = document.querySelector('.about');
@@ -14,7 +15,7 @@
   window.addEventListener('keyup', (e) => {
     pressed.push(e.key);
 
-  visitorTyping(e.key);
+    visitorTyping(e.key);
 
 
     pressed.splice(-commando.length -1, pressed.length - commando.length);
@@ -26,9 +27,17 @@
   })
 
   function visitorTyping(letter){
+    console.log(letter);
+
     if(letter.length == 1){
+      pressedAll.push(letter);
       _visitorInput.insertAdjacentText('beforeend', letter);
     }
+    if(letter == 'Backspace'){
+      pressedAll.pop();
+      _visitorInput.innerHTML = pressedAll.join('');
+    }
+
   }
 
 
