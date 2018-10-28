@@ -9,7 +9,7 @@
     { 'skill': 'SASS', 'rate': 2 },
     { 'skill': 'JavaScript', 'rate': 3 },
     { 'skill': 'React', 'rate': 2 },
-    { 'skill': 'Ruby on rails', 'rate': 1 },
+    { 'skill': 'Ruby on Rails', 'rate': 1 },
     { 'skill': 'HAML', 'rate': 1 },
     { 'skill': 'PHP', 'rate': 2 },
     { 'skill': 'Wordpress', 'rate': 1 },

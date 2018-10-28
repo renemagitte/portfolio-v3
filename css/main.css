@@ -165,6 +165,7 @@ h1{
 .about-open{
   height: 100vh;
   background-color: black;
+  transition: background-color 1s ease-in-out;
 } 
 
 .about-content{
@@ -208,4 +209,9 @@ h1{
   100%
     {opacity: 0;}  
 } 
+
+
+.lastfm-songs{
+  line-height: 2px;
+}
 
