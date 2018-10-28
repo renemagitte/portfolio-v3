@@ -171,10 +171,11 @@ h1{
 .about-content{
   display: none;
   opacity: 0;
-  padding-left: 10px;
+  padding-left: 20px;
   text-align: left;
   font-family: 'Monaco', monospace;
-  color: lightgrey;
+  /* color: lightgrey; */
+  color: lightgreen;
   font-size: 12px;
 }
 
@@ -183,13 +184,18 @@ h1{
   opacity: 1;
 }
 
+/* .about-content p {
+  line-height: 3px;
+} */
+
 
 .typer{
   display: inline-block;
   width: 8px;
   height: 13px;
   margin: 1px 0 0px -1px;
-  background-color: lightgrey;
+  margin-left: 2px;
+  background-color: lightgreen;
   opacity: 1;
   vertical-align: top;
   animation: blinker 0.5s linear infinite alternate;
@@ -210,8 +216,4 @@ h1{
     {opacity: 0;}  
 } 
 
-
-.lastfm-songs{
-  line-height: 2px;
-}
 
