@@ -23,6 +23,7 @@
     if(pressed.join('').includes(commando)){
       _about.classList.remove('about-open');
       _aboutContent.classList.remove('about-content-open');
+      _visitorInput.innerHTML = '';
     }
   })
 
