@@ -11,7 +11,8 @@
   function openAbout(){
     _about.classList.add('about-open');
     _aboutContent.classList.add('about-content-open');
-    lastFm();
+    // lastFm();
+    lastFm.fetchSongs();
   }
 
 })();
