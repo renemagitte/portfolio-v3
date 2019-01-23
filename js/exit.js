@@ -2,7 +2,7 @@
 (function(){
 
   const pressed = [];
-  const commando = 'exit';
+  const commando = 'exitEnter';
   const pressedAll = [];
 
 
@@ -24,6 +24,8 @@
       _about.classList.remove('about-open');
       _aboutContent.classList.remove('about-content-open');
       _visitorInput.innerHTML = '';
+      pressedAll.splice(0, pressedAll.length);
+      pressed.splice(0, pressed.length);
     }
   })
 
